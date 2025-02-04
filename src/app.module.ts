@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { KeywordModule } from './keyword/keyword.module';
 import { Keyword } from './keyword/entity/keyword.entity';
+import { CrawlingModule } from './crawling/crawling.module';
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import { Keyword } from './keyword/entity/keyword.entity';
       synchronize: true,         // 개발 환경에서는 true, 프로덕션 환경에서는 false로 설정
       logging: true,             // 쿼리 로깅 활성화
     }),
-    KeywordModule
+    KeywordModule,
+    CrawlingModule
   ],
   providers: [],
 })
