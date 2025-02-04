@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-import { KeywordController } from './keyword/controller/keyword.controller';
+import { KeywordModule } from './keyword/keyword.module';
 
 @Module({
-  imports: [],
-  controllers: [KeywordController],
+  imports: [KeywordModule],
   providers: [],
 })
 export class AppModule {}
